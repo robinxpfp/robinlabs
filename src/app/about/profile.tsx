@@ -11,6 +11,7 @@ export default function Profile() {
         alt="PFP"
         // src={"/pfp-v.jpg"}
         // src={"/pfp.png"}
+        src=""
       />
     </div>
   );

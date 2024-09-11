@@ -1,8 +1,4 @@
-import {
-  AlertDialogContent,
-  AlertDialogTitle,
-  AlertDialog,
-} from "@/components/ui/alert-dialog";
+import { AlertDialogContent, AlertDialog } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 
 import Link from "next/link";

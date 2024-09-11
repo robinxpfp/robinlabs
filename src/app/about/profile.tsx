@@ -9,9 +9,8 @@ export default function Profile() {
         width={300}
         height={300}
         alt="PFP"
-        // src={"/pfp-v.jpg"}
-        // src={"/pfp.png"}
-        src=""
+        // src={"/pfp-l.jpg"}
+        src={"/pfp.png"}
       />
     </div>
   );

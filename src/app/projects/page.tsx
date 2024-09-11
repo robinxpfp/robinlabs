@@ -1,4 +1,4 @@
-import Nav from "../about/nav";
+import Nav from "../../components/nav";
 import FeaturedProjects from "./featured-projects";
 
 export default async function Page() {

@@ -8,14 +8,15 @@ type Project = {
 export const posts: Project[] = [
   {
     id: 0,
-    url: "",
-    title: "My Most Used Cron Commands for Mac",
+    url: "/posts",
+    title: "Lorem ipsum dolor sit amet 1...",
     date: "Sun 8 2024",
   },
   {
     id: 1,
-    url: "",
-    title: "Next.js 14 Blog w/ View Counter and Minute Read",
+    url: "/posts",
+    title: "Lorem ipsum dolor sit amet 2...",
+
     date: "Sun 8 2024",
   },
 ];

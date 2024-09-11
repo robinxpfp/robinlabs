@@ -1,10 +1,10 @@
 import Social from "./social";
 import About from "./about";
 import Profile from "./profile";
-import Nav from "./nav";
-import ProjectjsSecction from "./projectjs-secction";
+import Nav from "../../components/nav";
+import ProjectsSecction from "./projects-secction";
 import PostsSecction from "./posts-secction";
-import Footer from "./footer";
+// import Footer from "./footer";
 
 export default function Page() {
   return (
@@ -19,9 +19,9 @@ export default function Page() {
           <Social />
         </div>
       </div>
-      <ProjectjsSecction />
+      <ProjectsSecction />
       <PostsSecction />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

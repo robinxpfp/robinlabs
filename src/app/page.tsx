@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="max-w-3xl mx-auto flex flex-col justify-center min-h-screen mb-20">
       <Nav />
-      <div className="flex sm:flex-col flex-col-reverse justify-center  sm:items-end items-center my-12 max-w-xl sm:mx-auto mx-5 sm:-space-y-20">
+      <div className="flex sm:flex-col flex-col-reverse justify-center  sm:items-end items-center my-12 max-w-xl sm:mx-auto mx-5 sm:-space-y-32">
         <div className="flex justify-start items-start">
           <Profile />
         </div>

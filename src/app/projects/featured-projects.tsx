@@ -30,7 +30,7 @@ export default function FeaturedProjects() {
             </div>
           </Link>
         ))
-        .slice(0, pathname === "/about" ? 2 : projects.length)}
+        .slice(0, pathname === "/" ? 2 : projects.length)}
     </div>
   );
 }

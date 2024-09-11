@@ -11,7 +11,7 @@ export default function WorkInProgress() {
           This page is currently under development. Please check back later.
         </p>
         <Button variant="link">
-          <Link href="/about">Back</Link>
+          <Link href="/">Back</Link>
         </Button>
       </AlertDialogContent>
     </AlertDialog>

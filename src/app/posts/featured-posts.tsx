@@ -30,7 +30,7 @@ export default function FeaturedPosts() {
             </div>
           </div>
         ))
-        .slice(0, pathname === "/about" ? 1 : posts.length)}
+        .slice(0, pathname === "/" ? 1 : posts.length)}
     </div>
   );
 }

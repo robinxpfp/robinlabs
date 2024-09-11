@@ -9,7 +9,7 @@ export default function FeaturedProjects() {
   const pathname = usePathname();
 
   return (
-    <div>
+    <div className="max-w-3xl md:mx-auto mx-2">
       {projects
         .map((item) => (
           <Link

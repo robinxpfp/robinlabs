@@ -9,7 +9,11 @@ export default function FeaturedProjects() {
   const pathname = usePathname();
 
   return (
-    <div className="max-w-3xl md:mx-auto mx-2">
+    <div
+      className={`max-w-3xl md:mx-auto ${
+        pathname === "/projects" ? "mx-2" : "mx-0"
+      }`}
+    >
       {projects
         .map((item) => (
           <Link

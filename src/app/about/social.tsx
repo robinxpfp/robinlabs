@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import {
+  GitHubLogoIcon,
   InstagramLogoIcon,
   LinkedInLogoIcon,
   TwitterLogoIcon,
@@ -23,6 +24,11 @@ export default function Social() {
       <Button size="icon" className="bg-white text-black ">
         <Link href="https://www.linkedin.com/in/sauldev">
           <LinkedInLogoIcon className="w-6 h-6" />
+        </Link>
+      </Button>
+      <Button size="icon" className="bg-white text-black ">
+        <Link href="https://github.com/robinxpfp">
+          <GitHubLogoIcon className="w-6 h-6" />
         </Link>
       </Button>
       <Button disabled={true} size="icon" className="bg-white text-black">

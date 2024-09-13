@@ -1,5 +1,11 @@
 import Nav from "../../components/nav";
 import FeaturedProjects from "./featured-projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects - Robin",
+  // description: "...",
+};
 
 export default async function Page() {
   return (

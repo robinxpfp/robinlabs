@@ -22,6 +22,7 @@ export function ThemeMode() {
           variant="outline"
           size="icon"
           className="border-neutral-300"
+          aria-label="Toggle theme" // Añadido aria-label
         >
           {/* <Button disabled={false} variant="outline" size="icon"> */}
           <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-neutral-900 " />

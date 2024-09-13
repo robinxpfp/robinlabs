@@ -20,7 +20,7 @@ export default function FeaturedProjects() {
             key={item.id}
             href={item.url}
             passHref
-            className="block bg-neutral-200/60 dark:bg-neutral-900 my-2.5 p-4 rounded-xl md:text-base text-sm transition-all duration-300 hover:bg-neutral-200 dark:hover:bg-neutral-800"
+            className="block my-2.5 p-4 rounded-xl md:text-base text-sm transition-all duration-300 "
           >
             <div>
               <div className="font-semibold text-neutral-900 dark:text-neutral-200">

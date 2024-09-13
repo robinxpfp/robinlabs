@@ -24,12 +24,14 @@ export default function FeaturedProjects() {
           >
             <div>
               <div className="font-semibold text-white">{item.title}</div>
-              <div>{item.descripcion}</div>
+              <div className="opacity-85">{item.descripcion}</div>
             </div>
 
             <div className="mt-4 flex space-x-2">
               {item.tools.map((tool, i) => (
-                <Badge key={i}>{tool}</Badge>
+                <Badge variant="custom" key={i}>
+                  {tool}
+                </Badge>
               ))}
             </div>
           </Link>

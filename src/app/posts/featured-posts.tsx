@@ -24,7 +24,7 @@ export default function FeaturedPosts() {
                   className=" text-white flex justify-between md:text-base text-sm"
                 >
                   <div>{item.title}</div>
-                  <Badge>{item.date}</Badge>
+                  <Badge variant="custom">{item.date}</Badge>
                 </Link>
               </div>
             </div>

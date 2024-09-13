@@ -22,44 +22,42 @@ export default function MenuNavigation() {
 
   return (
     <Breadcrumb className="my-4">
-      <ul>
-        {fullPathArray.map((path, index) => {
-          const href = "/" + fullPathArray.slice(1, index + 1).join("/");
-          const isLast = index === fullPathArray.length - 1;
+      {fullPathArray.map((path, index) => {
+        const href = "/" + fullPathArray.slice(1, index + 1).join("/");
+        const isLast = index === fullPathArray.length - 1;
 
-          return (
-            <React.Fragment key={index}>
-              <BreadcrumbItem as="li">
-                {" "}
-                {!isLast ? (
-                  <BreadcrumbLink asChild>
-                    <Link
-                      href={href}
-                      className="text-neutral-900 dark:text-neutral-200 font-bold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
-                    >
-                      {capitalizeFirstLetter(path)}
-                    </Link>
-                  </BreadcrumbLink>
-                ) : (
-                  <BreadcrumbLink asChild>
-                    <Link
-                      href={href}
-                      className="text-neutral-900 dark:text-neutral-200 font-bold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
-                    >
-                      {capitalizeFirstLetter(path)}
-                    </Link>
-                  </BreadcrumbLink>
-                )}
-              </BreadcrumbItem>
-              {!isLast && (
-                <span className="text-neutral-700 dark:text-neutral-200/60 mx-2">
-                  {" > "}
-                </span>
+        return (
+          <React.Fragment key={index}>
+            <BreadcrumbItem>
+              {" "}
+              {!isLast ? (
+                <BreadcrumbLink asChild>
+                  <Link
+                    href={href}
+                    className="text-neutral-900 dark:text-neutral-200 font-bold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
+                  >
+                    {capitalizeFirstLetter(path)}
+                  </Link>
+                </BreadcrumbLink>
+              ) : (
+                <BreadcrumbLink asChild>
+                  <Link
+                    href={href}
+                    className="text-neutral-900 dark:text-neutral-200 font-bold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
+                  >
+                    {capitalizeFirstLetter(path)}
+                  </Link>
+                </BreadcrumbLink>
               )}
-            </React.Fragment>
-          );
-        })}
-      </ul>
+            </BreadcrumbItem>
+            {!isLast && (
+              <span className="text-neutral-700 dark:text-neutral-200/60 mx-2">
+                {" > "}
+              </span>
+            )}
+          </React.Fragment>
+        );
+      })}
     </Breadcrumb>
   );
 }

@@ -30,7 +30,7 @@ export function ThemeMode() {
           {/* <span className="sr-only">Toggle theme</span> */}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="p-0.5">
+      <DropdownMenuContent align="end" className="p-0">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           Light
         </DropdownMenuItem>

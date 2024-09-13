@@ -12,7 +12,8 @@ export default function Social() {
     <div className="flex justify-center space-x-4 my-4">
       <Button
         size="icon"
-        className="bg-neutral-900/70  text-white border-white border"
+        className="bg-neutral-100  text-neutral-900 border-neutral-900 
+        dark:bg-neutral-900  dark:text-neutral-50 dark:border-neutral-50 border hover:bg-neutral-100 dark:hover:bg-neutral-900"
       >
         <Link href="https://x.com/robinxpfp">
           <TwitterLogoIcon className="w-6 h-6" />
@@ -20,7 +21,8 @@ export default function Social() {
       </Button>
       <Button
         size="icon"
-        className="bg-neutral-900/70  text-white border-white border"
+        className="bg-neutral-100  text-neutral-900 border-neutral-900 
+        dark:bg-neutral-900  dark:text-neutral-50 dark:border-neutral-50 border hover:bg-neutral-100 dark:hover:bg-neutral-900"
       >
         <Link href="https://instagram.com/robinxpfp">
           <InstagramLogoIcon className="w-6 h-6" />
@@ -28,7 +30,8 @@ export default function Social() {
       </Button>
       <Button
         size="icon"
-        className="bg-neutral-900/70  text-white border-white border"
+        className="bg-neutral-100  text-neutral-900 border-neutral-900 
+        dark:bg-neutral-900  dark:text-neutral-50 dark:border-neutral-50 border hover:bg-neutral-100 dark:hover:bg-neutral-900"
       >
         <Link href="https://www.linkedin.com/in/sauldev">
           <LinkedInLogoIcon className="w-6 h-6" />
@@ -36,7 +39,8 @@ export default function Social() {
       </Button>
       <Button
         size="icon"
-        className="bg-neutral-900/70  text-white border-white border"
+        className="bg-neutral-100  text-neutral-900 border-neutral-900 
+        dark:bg-neutral-900  dark:text-neutral-50 dark:border-neutral-50 border hover:bg-neutral-100 dark:hover:bg-neutral-900"
       >
         <Link href="https://github.com/robinxpfp">
           <GitHubLogoIcon className="w-6 h-6" />

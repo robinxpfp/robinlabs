@@ -6,12 +6,14 @@ import Link from "next/link";
 export default function ProjectsSecction() {
   return (
     <section className="mx-4">
-      <div className="font-bold text-lg mt-16 ml-2">Featured Projects</div>
+      <div className="font-bold text-lg mt-16 ml-2 text-neutral-900 dark:text-neutral-100">
+        Featured Projects
+      </div>
       <FeaturedProjects />
       <div className="flex justify-end mt-4">
         <Link
           href="/projects"
-          className="font-semibold text-sm underline underline-offset-4 mr-4"
+          className="font-semibold text-sm underline underline-offset-4 mr-4 text-neutral-900 dark:text-neutral-100"
         >
           All Project
         </Link>

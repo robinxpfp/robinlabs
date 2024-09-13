@@ -33,20 +33,27 @@ export default function MenuNavigation() {
                 <BreadcrumbLink asChild>
                   <Link
                     href={href}
-                    className="text-neutral-400 hover:underline"
+                    className="text-neutral-900 dark:text-neutral-200  font-bold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
                   >
                     {capitalizeFirstLetter(path)}
                   </Link>
                 </BreadcrumbLink>
               ) : (
                 <BreadcrumbLink asChild>
-                  <Link href={href} className="text-white font-bold">
+                  <Link
+                    href={href}
+                    className="text-neutral-900 dark:text-neutral-200  font-bold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
+                  >
                     {capitalizeFirstLetter(path)}
                   </Link>
                 </BreadcrumbLink>
               )}
             </BreadcrumbItem>
-            {!isLast && <span className="text-neutral-400 mx-2">{" > "}</span>}
+            {!isLast && (
+              <span className="text-neutral-700 dark:text-neutral-200/60 mx-2">
+                {" > "}
+              </span>
+            )}
           </React.Fragment>
         );
       })}

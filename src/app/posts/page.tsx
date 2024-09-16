@@ -3,8 +3,6 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Posts - Robin",
-
-  // description: "...",
 };
 
 export default async function Page() {

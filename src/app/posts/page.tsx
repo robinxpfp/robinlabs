@@ -1,9 +1,4 @@
 import WorkInProgress from "./work-in-progress";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Posts - Robin",
-};
 
 export default async function Page() {
   return (

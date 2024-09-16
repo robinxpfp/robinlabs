@@ -19,16 +19,34 @@ type RootLayoutProps = {
   children: React.ReactNode;
 };
 
-// export const metadata: Metadata = {
-//   title: "Home Page - Robin",
-//   // description: "...",
-// };
 export const metadata: Metadata = {
-  title: "Home Page - Robin",
-  applicationName: "Robin's Website",
-  icons: "https://example.com/apple-icon.png",
-
-  // description: "...",
+  title: "Robin Labs",
+  applicationName: "Robin Labs",
+  description: "Creativity and Engineering",
+  icons: "/pfp.jpg",
+  openGraph: {
+    title: "Robin Labs",
+    description: "Creativity and Engineering",
+    url: "https://www.robinlabs.xyz",
+    siteName: "Robin's Website",
+    images: [
+      {
+        url: "/pfp.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Robin Labs Banner",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Robin's Website",
+    description:
+      "Welcome to Robin's website where creativity meets engineering.",
+    images: ["/pfp.jpg"],
+  },
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {

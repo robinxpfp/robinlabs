@@ -7,6 +7,12 @@ import {
 } from "@radix-ui/react-icons";
 import Link from "next/link";
 
+type Social = {
+  size: string;
+  className: string;
+  arial_Label: string;
+};
+
 export default function Social() {
   return (
     <div className="flex justify-center space-x-4 my-4">

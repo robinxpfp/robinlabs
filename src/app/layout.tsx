@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
     title: "Robin Labs",
     description: "Creativity and Engineering",
     url: "https://www.robinlabs.xyz",
-    siteName: "Robin's Website",
+    siteName: "Robin Labs",
     images: [
       {
         url: "/pfp.jpg",
@@ -42,9 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Robin's Website",
-    description:
-      "Welcome to Robin's website where creativity meets engineering.",
+    title: "Robin Labs",
+    description: "Creativity and Engineering",
     images: ["/pfp.jpg"],
   },
 };

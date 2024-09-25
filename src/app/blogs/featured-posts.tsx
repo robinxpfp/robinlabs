@@ -15,18 +15,18 @@ export default function FeaturedPosts() {
         .map((item, index) => (
           <div
             key={index}
-            className="block my-2.5 p-4 rounded-xl md:text-base text-sm transition-all duration-300 md:hover:bg-neutral-100 md:dark:hover:bg-neutral-800/40"
+            className="block my-2.5 p-4 rounded-xl md:text-base text-sm transition-all duration-300 md:hover:bg-neutral-100 md:dark:hover:bg-neutral-800/40 max-w-2xl mx-auto"
           >
             <div className="flex justify-between">
-              <div className="w-full">
-                <Link
-                  href={item.url}
-                  className=" text-neutral-700 dark:text-neutral-200 flex justify-between md:text-base text-sm "
-                >
-                  <div>{item.title}</div>
-                  <Badge variant="custom">{item.date}</Badge>
-                </Link>
-              </div>
+              <Link
+                href={item.url}
+                className="text-neutral-700 dark:text-neutral-200 md:text-base text-sm flex-grow"
+              >
+                {item.title}
+              </Link>
+              <Badge variant="custom" className="ml-4">
+                {item.date}
+              </Badge>
             </div>
           </div>
         ))

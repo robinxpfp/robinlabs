@@ -27,7 +27,7 @@ export default async function BlogsPage() {
                   <div className="flex flex-col">
                     <div className="font-bold">{blog.frontmatter.title}</div>
                     {/* <div className="max-w-max text-muted-foreground font-medium text-sm"> */}
-                    <div className="max-w-max text-muted-foreground font-medium md:text-sm text-xs">
+                    <div className="max-w-max text-muted-foreground font-medium md:text-sm text-xs md:mb-0 mb-2">
                       {blog.frontmatter.description.slice(0, 80)}...
                     </div>
                   </div>

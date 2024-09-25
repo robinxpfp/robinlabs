@@ -20,7 +20,7 @@ export default function FeaturedPosts() {
             <div className="flex justify-between">
               <Link
                 href={item.url}
-                className="text-neutral-700 dark:text-neutral-200 md:text-base text-sm flex-grow"
+                className="text-neutral-700 dark:text-neutral-200 md:text-base text-sm flex-grow mx-2"
               >
                 {item.title}
               </Link>

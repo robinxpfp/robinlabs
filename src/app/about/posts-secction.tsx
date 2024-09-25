@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import FeaturedPosts from "../posts/featured-posts";
+import FeaturedPosts from "../blogs/featured-posts";
 
 export default function PostsSecction() {
   return (

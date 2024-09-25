@@ -10,7 +10,7 @@ export default function FeaturedProjects() {
 
   return (
     <div
-      className={`max-w-3xl md:mx-auto ${
+      className={`max-w-2xl md:mx-auto ${
         pathname === "/projects" ? "mx-2" : "mx-0"
       }`}
     >
@@ -20,10 +20,10 @@ export default function FeaturedProjects() {
             key={item.id}
             href={item.url}
             passHref
-            className="block my-2.5 p-4 rounded-xl md:text-base text-sm transition-all duration-300 md:hover:bg-neutral-100 md:dark:hover:bg-neutral-800/40"
+            className="block my-2.5 p-4 rounded-xl md:text-sm text-xs transition-all duration-300 md:hover:bg-neutral-100 md:dark:hover:bg-neutral-800/40"
           >
             <div>
-              <div className="font-semibold text-neutral-900 dark:text-neutral-200 ">
+              <div className="font-semibold text-neutral-900 dark:text-neutral-200 md:text-base text-sm">
                 {item.title}
               </div>
               <div className="opacity-85 text-neutral-700 dark:text-neutral-200/70">

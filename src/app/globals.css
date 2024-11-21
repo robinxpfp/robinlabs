@@ -7,8 +7,6 @@
   --foreground: #000000;
   --popover: #ffffff;
   --popover-foreground: #171717;
-  --darkBackground: #3b3b3b;
-  --darkForeground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +14,6 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --popover: #0a0a0a;
-    --popover-foreground: #ededed;
   }
 }
 
@@ -24,13 +21,6 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--background);
-  color: var(--foreground);
-}
-
-body.dark {
-  background-color: var(--darkBackground);
-  color: var(--darkForeground);
 }
 
 @layer utilities {

@@ -18,7 +18,7 @@ export function ThemeMode() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          disabled={false}
+          disabled={true}
           variant="outline"
           size="icon"
           className="border-neutral-300"

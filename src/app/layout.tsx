@@ -52,7 +52,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, user-scalable=no" />
-        <link rel="icon" href="/pfp.jpg" type="image/jpeg" sizes="any" />
+        {/* <link rel="icon" href="/pfp.png" type="image/png" sizes="any" />{" "} */}
+        <link rel="icon" href="/pfp.jpg" type="image/x-icon" />
         <link
           rel="apple-touch-icon"
           href="/apple-icon?<generated>"

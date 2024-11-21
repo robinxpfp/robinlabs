@@ -2,9 +2,10 @@ import Image from "next/image";
 
 export default function Profile() {
   return (
-    <div className="w-full h-auto max-w-[300px] min-w-[250px] min-h-[250px] relative">
+    <div className="w-full h-auto max-w-[300px] min-w-[250px] min-h-[250px] relative ">
       <Image
-        className="rounded-full"
+        className="rounded-full drop-shadow-2xl"
+        // className="rounded-full shadow-2xl"
         // className="rounded-sm"
         layout="responsive"
         width={300}

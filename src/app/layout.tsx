@@ -19,37 +19,52 @@ type RootLayoutProps = {
 };
 
 export const metadata: Metadata = {
-  title: "Robin Labs",
-  applicationName: "Robin Labs",
-  description: "Creativity and Engineering",
-  icons: "/pfp.jpg",
+  metadataBase: new URL("https://www.robinlabs.xyz/"),
+  title: { default: "Robin Labs", template: "%s | Robin Labs" },
+  description: "Software Developer",
   openGraph: {
     title: "Robin Labs",
-    description: "Creativity and Engineering",
-    url: "https://www.robinlabs.xyz",
+    description: "Software Developer.",
+    url: "https://www.robinlabs.xyz/",
     siteName: "Robin Labs",
-    images: [
-      {
-        url: "/pfp.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Robin Labs Banner",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   twitter: {
+    title: "Robin",
     card: "summary_large_image",
-    title: "Robin Labs",
-    description: "Creativity and Engineering",
-    images: ["/pfp.jpg"],
   },
 };
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <link rel="icon" href="/pfp.jpg" type="image/jpeg" sizes="any" />
+        <link
+          rel="apple-touch-icon"
+          href="/apple-icon?<generated>"
+          type="image/<generated>"
+          sizes="<generated>"
+        />
+        <script
+          src="https://beamanalytics.b-cdn.net/beam.min.js"
+          data-token="a07e2826-5910-4684-9e69-0ec4388a0509"
+          async
+        ></script>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground dark:bg-darkBackground dark:text-darkForeground`}
       >

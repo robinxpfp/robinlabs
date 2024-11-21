@@ -1,61 +1,20 @@
-import { Button } from "@/components/ui/button";
-import {
-  GitHubLogoIcon,
-  InstagramLogoIcon,
-  LinkedInLogoIcon,
-  TwitterLogoIcon,
-} from "@radix-ui/react-icons";
-import Link from "next/link";
-
-type Social = {
-  size: string;
-  className: string;
-  arial_Label: string;
-};
+import { CONFIG } from "@/config";
 
 export default function Social() {
   return (
-    <div className="flex justify-center space-x-4 my-4">
-      <Button
-        size="icon"
-        className="bg-neutral-100 text-neutral-900 dark:bg-neutral-700/70 
-         dark:text-neutral-50"
-        aria-label="Twitter"
-      >
-        <Link href="https://x.com/robinxpfp" aria-label="Twitter">
-          <TwitterLogoIcon className="w-6 h-6" />
-        </Link>
-      </Button>
-      <Button
-        size="icon"
-        className="bg-neutral-100 text-neutral-900 dark:bg-neutral-700/70 
-         dark:text-neutral-50"
-        aria-label="Instagram"
-      >
-        <Link href="https://instagram.com/robinxpfp" aria-label="Instagram">
-          <InstagramLogoIcon className="w-6 h-6" />
-        </Link>
-      </Button>
-      <Button
-        size="icon"
-        className="bg-neutral-100 text-neutral-900 dark:bg-neutral-700/70 
-         dark:text-neutral-50"
-        aria-label="LinkedIn"
-      >
-        <Link href="https://www.linkedin.com/in/sauldev" aria-label="LinkedIn">
-          <LinkedInLogoIcon className="w-6 h-6" />
-        </Link>
-      </Button>
-      <Button
-        size="icon"
-        className="bg-neutral-100 text-neutral-900 dark:bg-neutral-700/70 
-         dark:text-neutral-50"
-        aria-label="GitHub"
-      >
-        <Link href="https://github.com/robinxpfp" aria-label="GitHub">
-          <GitHubLogoIcon className="w-6 h-6" />
-        </Link>
-      </Button>
+    <div className="flex justify-start items-center space-x-3">
+      {CONFIG.socials.map((social, index) => (
+        <a
+          key={index}
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex items-center space-x-2 mb-2"
+        >
+          <div className="w-8 h-8">{social.icon}</div>
+          {/* <span className="text-sm text-secondary">{social.platform}</span>s */}
+        </a>
+      ))}
     </div>
   );
 }

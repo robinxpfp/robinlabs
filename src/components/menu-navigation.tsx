@@ -34,7 +34,7 @@ export default function MenuNavigation() {
                 <BreadcrumbLink asChild>
                   <Link
                     href={href}
-                    className="text-neutral-900 dark:text-neutral-200 font-bold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
+                    className="text-neutral-900 dark:text-neutral-200 font-semibold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
                   >
                     {capitalizeFirstLetter(path)}
                   </Link>
@@ -43,7 +43,7 @@ export default function MenuNavigation() {
                 <BreadcrumbLink asChild>
                   <Link
                     href={href}
-                    className="text-neutral-900 dark:text-neutral-200 font-bold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
+                    className="text-neutral-900 dark:text-neutral-200 font-semibold dark:hover:text-neutral-200 hover:text-neutral-900 hover:underline hover:underline-offset-4"
                   >
                     {capitalizeFirstLetter(path)}
                   </Link>

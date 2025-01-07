@@ -1,18 +1,17 @@
 import { CONFIG } from "@/config";
 
-export default function Social() {
+export function Social() {
   return (
-    <div className="flex justify-start items-center space-x-3">
+    <div className="flex justify-start items-center gap-2">
       {CONFIG.socials.map((social, index) => (
         <a
           key={index}
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center space-x-2 mb-2"
+          className="group flex items-center  mb-2 opacity-65 hover:opacity-100"
         >
-          <div className="w-8 h-8">{social.icon}</div>
-          {/* <span className="text-sm text-secondary">{social.platform}</span>s */}
+          <div className="w-6 h-6">{social.icon}</div>
         </a>
       ))}
     </div>

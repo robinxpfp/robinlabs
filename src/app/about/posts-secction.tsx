@@ -5,9 +5,6 @@ import FeaturedPosts from "../blogs/featured-posts";
 export default function PostsSecction() {
   return (
     <section className="mx-2">
-      <div className="font-bold text-lg mt-16 ml-4 mb-2 text-neutral-900 dark:text-neutral-100">
-        Features Posts
-      </div>
       <FeaturedPosts />
       <div className="flex justify-end mt-4">
         <Link

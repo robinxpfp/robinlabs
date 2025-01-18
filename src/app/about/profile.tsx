@@ -13,12 +13,12 @@ export function Profile() {
         className="rounded-full"
       />
       <div>
-        <h1 className="text-xl font-semibold">Robin</h1>
+        <h1 className="text-xl font-semibold">Fulano</h1>
         <Link
           href={"x.com/robinxpfp"}
           className="inline-flex items-center px-3 py-1 rounded-full bg-neutral-100 text-xs text-neutral-700"
         >
-          @robinxpfp
+          @fulano
         </Link>
         <p className="text-neutral-600 text-xs">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.

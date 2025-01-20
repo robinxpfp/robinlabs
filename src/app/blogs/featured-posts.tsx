@@ -10,27 +10,35 @@ export default function FeaturedPosts() {
   const pathname = usePathname();
 
   return (
-    <div>
+    <div
+      className={`max-w-2xl md:mx-auto ${
+        pathname === "/projects" ? "mx-2" : "mx-0"
+      }`}
+    >
+      {" "}
       {posts
         .map((item, index) => (
-          <div
+          <Link
             key={index}
-            className="block my-2.5 p-4 rounded-xl md:text-base text-sm transition-all duration-300 md:hover:bg-neutral-100 md:dark:hover:bg-neutral-800/40 max-w-2xl mx-auto"
+            href={item.url}
+            className="block  my-2.5 p-4 rounded-2xl transition-colors bg-neutral-100  dark:hover:bg-neutral-800/40  border-neutral-200 dark:border-neutral-800"
           >
-            <div className="flex justify-between">
-              <Link
-                href={item.url}
-                className="text-neutral-700 dark:text-neutral-200 md:text-base text-sm flex-grow mx-2"
-              >
-                {item.title}
-              </Link>
-              <Badge variant="custom" className="ml-4">
-                {item.date}
-              </Badge>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between">
+              <div>
+                <h3 className="text-base font-medium text-neutral-800 dark:text-neutral-200">
+                  {item.title}
+                </h3>
+                <p className="text-neutral-600 dark:text-neutral-400 text-xs">
+                  {item.description}
+                </p>
+              </div>
+              <div>
+                <Badge variant="custom">{item.date}</Badge>
+              </div>
             </div>
-          </div>
+          </Link>
         ))
-        .slice(0, pathname === "/" ? 1 : posts.length)}
+        .slice(0, pathname === "/" ? 2 : posts.length)}
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function Home() {
         <Nav />
         <main className="container mx-auto px-4 max-w-xl text-black">
           <div className="mb-4 text-center">
-            <div className="relative w-32 h-32 mx-auto mb-4">
+            <div className="relative w-32 h-32 mx-auto my-6">
               <Avatar className="w-32 h-32 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <AvatarImage src="" className="w-32 h-32" />
                 <AvatarFallback className="w-32 h-32 text-2xl bg-white">
@@ -28,14 +28,14 @@ export default function Home() {
                 @robinxpfp
               </Badge>
             </Link>
-            <p className="mt-2">Developer & Creator</p>
+            <p className="mt-2">Software Developer & Creator</p>
           </div>
           <div className="mb-10">
             <p className="leading-relaxed text-center">
-              I’m living online, always connected and creating. I specialize in
-              web development, focusing on front-end experiences and designs.
-              I’m also passionate about robotics and combining creativity with
-              technology.
+              Software developer, dedicated to creating accessible and
+              user-centered digital products. Passionate about crafting
+              high-quality software solutions and seeking new opportunities in
+              the field.
             </p>
           </div>
           <Skills />

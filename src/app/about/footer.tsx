@@ -2,7 +2,7 @@ import { CONFIG } from "@/config";
 
 export function Footer() {
   return (
-    <footer className="px-6 bg-background">
+    <footer className="px-6 pb-6 bg-background">
       <div className="flex justify-center space-x-6">
         {CONFIG.socials.map((social, index) => (
           <a

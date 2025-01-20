@@ -1,4 +1,4 @@
-import Nav from "@/components/nav";
+import { Nav } from "@/components/nav";
 import { getBlogBySlug, getAllBlogSlug } from "@/app/posts/fetchers";
 
 export async function generateStaticParams() {

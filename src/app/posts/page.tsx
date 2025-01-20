@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getBlogs } from "./fetchers";
-import Nav from "@/components/nav";
+import { Nav } from "@/components/nav";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,7 +29,10 @@ export default async function BlogsPage() {
                 <h2 className="text-xl font-bold text-black group-hover:translate-x-[-2px] group-hover:translate-y-[-2px] transition-transform">
                   {blog.frontmatter.title}
                 </h2>
-                <p className="text-sm font-mono mt-1 text-black">
+                <p className="text-xs font-mono  mt-1 text-black">
+                  {blog.frontmatter.description.slice(0, 100)}...
+                </p>
+                <p className="text-xs text-end font-mono font-bold mt-1 text-black">
                   {blog.frontmatter.publishDate}
                 </p>
               </Link>

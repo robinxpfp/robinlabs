@@ -6,13 +6,6 @@ type Project = {
   tools: string[];
   images?: string[];
 };
-// export interface Post {
-//   id: string;
-//   title: string;
-//   description: string;
-//   publishedAt: string;
-//   images: string[];
-// }
 
 export const projects: Project[] = [
   {

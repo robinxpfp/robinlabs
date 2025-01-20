@@ -4,7 +4,7 @@ import { posts } from "@/app/bobo-post/post";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Nav from "@/components/nav";
+import { Nav } from "@/components/nav";
 // import { Nav } from "../nav";
 
 export default function Page() {

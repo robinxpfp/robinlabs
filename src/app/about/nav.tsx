@@ -14,11 +14,11 @@ export function Nav() {
       <Button
         variant="ghost"
         className="border-2 border-black bg-white hover:bg-neutral-100 active:bg-neutral-200 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none transition-all rounded-none hover:text-black"
-        disabled={true}
-        // asChild
+        // disabled={true}
+        asChild
       >
-        Projects
-        {/* <Link href={"projects"}>Projects</Link> */}
+        {/* Projects */}
+        <Link href={"projects"}>Projects</Link>
       </Button>
     </div>
   );

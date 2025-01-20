@@ -4,7 +4,7 @@ import { XIcon } from "@/icons/x";
 
 export const CONFIG = {
   socials: [
-    { platform: "X", link: "https://twitter.com/robinxpfp", icon: <XIcon /> },
+    { platform: "X", link: "https://x.com/robinxpfp", icon: <XIcon /> },
     {
       platform: "GitHub",
       link: "https://github.com/robinxpfp",

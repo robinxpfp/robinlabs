@@ -29,28 +29,17 @@ export default function MenuNavigation() {
         return (
           <React.Fragment key={index}>
             <BreadcrumbItem>
-              {" "}
               {!isLast ? (
-                //    <Button
-                //    key={item}
-                //    variant="ghost"
-                //    className="border-2 border-black bg-white hover:bg-neutral-100 active:bg-neutral-200 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none transition-all rounded-none"
-                //    asChild
-                //  >
-                //    <Link href={item === "Home" ? "/" : `/${item.toLowerCase()}`}>
-                //      {item}
-                //    </Link>
-                //  </Button>
                 <BreadcrumbLink
                   asChild
-                  className="inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50  h-9 px-4 py-2 border-2 border-black bg-white hover:bg-neutral-100 active:bg-neutral-200 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none transition-all rounded-none"
+                  className="inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50  h-9 px-4 py-2 border-2 border-black bg-white hover:bg-neutral-100 active:bg-neutral-200 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none transition-all rounded-none hover:text-black"
                 >
                   <Link href={href}>{capitalizeFirstLetter(path)}</Link>
                 </BreadcrumbLink>
               ) : (
                 <BreadcrumbLink
                   asChild
-                  className="inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50  h-9 px-4 py-2 border-2 border-black bg-white hover:bg-neutral-100 active:bg-neutral-200 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none transition-all rounded-none"
+                  className="inline-flex items-center justify-center whitespace-nowrap  text-sm font-medium focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50  h-9 px-4 py-2 border-2 border-black bg-white hover:bg-neutral-100 active:bg-neutral-200 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none transition-all rounded-none hover:text-black"
                 >
                   <Link href={href}>{capitalizeFirstLetter(path)}</Link>
                 </BreadcrumbLink>

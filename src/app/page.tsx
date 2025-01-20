@@ -3,10 +3,9 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Footer } from "@/app/footer";
-import { Nav } from "@/app/nav";
+import { Footer } from "@/app/about/footer";
+import { Nav } from "@/app/about/nav";
 import { Badge } from "@/components/ui/badge";
-// import Nav from "@/components/nav";
 
 export default function Home() {
   const skills = [
@@ -21,10 +20,9 @@ export default function Home() {
   return (
     <div className="min-h-screen md:p-0 py-2 px-4">
       <div className="max-w-2xl mx-auto">
-        {/* <Nav /> */}
         <Nav />
 
-        <main className="container mx-auto px-4 max-w-xl">
+        <main className="container mx-auto px-4 max-w-xl text-black">
           <div className="mb-4 text-center">
             <div className="relative w-32 h-32 mx-auto mb-4">
               <Avatar className="w-32 h-32 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">

@@ -1,10 +1,11 @@
 "use client";
 
-import { posts } from "./post";
+import { posts } from "@/app/bobo-post/post";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Nav } from "../lolo/nav";
+import Nav from "@/components/nav";
+// import { Nav } from "../nav";
 
 export default function Page() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -33,16 +34,16 @@ export default function Page() {
 
   return (
     <div>
+      {/* <Nav /> */}
       <Nav />
-
-      <main className="mx-auto max-w-6xl px-4 pt-8">
+      <main className="mx-auto max-w-4xl p-4 min-h-screen flex items-center flex-col justify-center">
         {/* Desktop View */}
-        <div className="relative mb-16 h-[300px] w-full md:block hidden">
+        <div className="relative mb-16 h-[200px] w-full md:block hidden">
           <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 gap-[-2rem]">
             {currentPost.images.map((image, index) => (
               <div
                 key={`${currentPost.id}-${index}`}
-                className="relative h-[200px] w-[300px] overflow-hidden rounded-2xl shadow-lg transition-all duration-500"
+                className="relative h-[200px] w-[300px] overflow-hidden border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-500"
                 style={{
                   transform: `rotate(${index * 2 - 3}deg)`,
                   marginLeft: index === 0 ? "0" : "-2rem",
@@ -52,7 +53,8 @@ export default function Page() {
                 <Image
                   src={image || "/placeholder.svg"}
                   alt={`${currentPost.title} - Image ${index + 1}`}
-                  fill
+                  height={96}
+                  width={96}
                   className="object-cover"
                 />
               </div>
@@ -62,40 +64,39 @@ export default function Page() {
           {/* Navigation Buttons */}
           <button
             onClick={previousPost}
-            className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full  p-2 shadow-md transition-all  mb-2 border-2 border-b-4 active:border-2 active:border-t-4 bg-neutral-600 border-neutral-800 hover:bg-neutral-700"
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 transition-all border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none"
             aria-label="Previous post"
           >
             <ChevronLeft className="h-6 w-6" />
           </button>
           <button
             onClick={nextPost}
-            className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full  p-2 shadow-md transition-all  mb-2 border-2 border-b-4 active:border-2 active:border-t-4 bg-neutral-600 border-neutral-800 hover:bg-neutral-700"
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 transition-all border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none"
             aria-label="Next post"
           >
             <ChevronRight className="h-6 w-6" />
           </button>
         </div>
-
         {/* Post Details */}
         <div className="mx-auto max-w-2xl">
           <div className="mb-4">
             <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-900">Title</h3>
-              <p className="text-lg text-gray-600">{currentPost.title}</p>
+              <h3 className="text-sm font-semibold">Title</h3>
+              <p className="text-lg">{currentPost.title}</p>
             </div>
 
             <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-900">Description</h3>
-              <p className="text-lg text-gray-600">{currentPost.description}</p>
+              <h3 className="text-sm font-semibold">Description</h3>
+              <p className="text-lg">{currentPost.description}</p>
             </div>
 
-            <div className="mb-8">
-              <h3 className="text-sm font-medium text-gray-900">Published</h3>
-              <p className="text-lg text-gray-600">{currentPost.publishedAt}</p>
+            <div className="mb-6">
+              <h3 className="text-sm font-semibold">Published</h3>
+              <p className="text-lg">{currentPost.publishedAt}</p>
             </div>
           </div>
 
-          <button className="inline-flex items-center px-4 py-2 text-sm font-medium  shadow-sm transition-all rounded-full border-2 border-b-4 active:border-2 active:border-t-4 bg-neutral-600 border-neutral-800 hover:bg-neutral-700 text-white mb-10">
+          <button className="inline-flex items-center px-4 py-2 text-sm font-medium transition-all border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none mb-10">
             Read more
             <svg
               className="ml-2 h-4 w-4"
@@ -116,9 +117,8 @@ export default function Page() {
         <div className="md:hidden space-y-16">
           {posts.map((post, postIndex) => (
             <div key={`mobile-${post.id}`} className="space-y-4">
-              <div className="relative h-[200px] w-full overflow-hidden rounded-2xl">
+              <div className="relative h-[200px] w-full overflow-hidden border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
                 <Image
-                  // {post.images[currentImageIndex[postIndex]]
                   src={post.images[currentImageIndex] || "/placeholder.svg"}
                   alt={`${post.title} - Image ${currentImageIndex + 1}`}
                   fill
@@ -126,14 +126,14 @@ export default function Page() {
                 />
                 <button
                   onClick={() => previousImage(postIndex)}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full   shadow-md transition-all text-white border-2 border-b-4 active:border-2 active:border-t-4 bg-neutral-600 border-neutral-800 hover:bg-neutral-700"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 p-2 transition-all border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none"
                   aria-label="Previous image"
                 >
                   <ChevronLeft className="h-6 w-6" />
                 </button>
                 <button
                   onClick={() => nextImage(postIndex)}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full  p-2 shadow-md transition-all mb-2 border-2 border-b-4 active:border-2 active:border-t-4 bg-neutral-600 border-neutral-800 hover:bg-neutral-700"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 p-2 transition-all border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none"
                   aria-label="Next image"
                 >
                   <ChevronRight className="h-6 w-6" />
@@ -141,23 +141,21 @@ export default function Page() {
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-sm font-medium text-gray-900">Title</h3>
-                <p className="text-lg text-gray-600">{post.title}</p>
+                <h3 className="text-sm font-medium">Title</h3>
+                <p className="text-lg">{post.title}</p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-sm font-medium text-gray-900">
-                  Description
-                </h3>
-                <p className="text-lg text-gray-600">{post.description}</p>
+                <h3 className="text-sm font-medium">Description</h3>
+                <p className="text-lg">{post.description}</p>
               </div>
 
               <div className="space-y-2">
-                <h3 className="text-sm font-medium text-gray-900">Published</h3>
-                <p className="text-lg text-gray-600">{post.publishedAt}</p>
+                <h3 className="text-sm font-medium">Published</h3>
+                <p className="text-lg">{post.publishedAt}</p>
               </div>
 
-              <button className="inline-flex items-center  px-4 py-2 text-sm font-medium text-gray-900 shadow-md transition-all  rounded-full border-2 border-b-4 active:border-2 active:border-t-4 bg-neutral-600 border-neutral-800 hover:bg-neutral-700 mb-10">
+              <button className="inline-flex items-center px-4 py-2 text-sm font-medium transition-all border-2 border-black bg-white hover:bg-neutral-100 text-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] active:shadow-none mb-10">
                 Read more
                 <svg
                   className="ml-2 h-4 w-4"

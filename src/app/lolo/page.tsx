@@ -20,8 +20,7 @@ export default function Home() {
   return (
     <div>
       <Nav />
-
-      <main className="container mx-auto px-4 py-10 max-w-xl">
+      <main className="container mx-auto px-4  max-w-xl">
         <div className="mb-4 text-center">
           <div className="relative w-32 h-32 mx-auto mb-4">
             <Avatar className="w-32 h-32">

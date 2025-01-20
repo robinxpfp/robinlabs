@@ -11,7 +11,7 @@ export default function Nav() {
     //     <ThemeMode />
     //   </div>
     // </div>
-    <div className="flex justify-start items-center p-4 ">
+    <div className="flex justify-start items-center">
       <MenuNavigation />
     </div>
   );
